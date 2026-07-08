@@ -1,0 +1,2 @@
+Select * from exam_results e1 where e1.score = (select max(score) from exam_results where student_id = e1.student_id) and 
+e1.exam_id = (select min(exam_id) from exam_results where student_id = e1.student_id and score =e1.score) order by e1.student_id;
