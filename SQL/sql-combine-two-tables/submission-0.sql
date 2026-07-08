@@ -1,0 +1,1 @@
+Select first_name, last_name, city, state from person as p full outer join address as ad on p.person_id = ad.person_id where p.first_name is not null
